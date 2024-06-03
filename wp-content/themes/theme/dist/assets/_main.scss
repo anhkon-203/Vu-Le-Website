@@ -1,0 +1,217 @@
+:root {
+  --f-body: "Roboto";
+  --blue: #01438D;
+  --white: #fff;
+  --black: #303030;
+}
+// html {
+//   -webkit-box-sizing: border-box;
+//   box-sizing: border-box;
+//   scroll-padding-top: 8rem;
+//   scroll-behavior: smooth;
+// }
+body {
+  font-family: var(--f-body);
+  font-weight: 400;
+  font-style: normal;
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+input,
+textarea,
+select {
+  outline: 0;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+  }
+}
+figure {
+  margin: 0;
+}
+
+// *::-webkit-scrollbar {
+//   width: 5px;
+//   height: 3px;
+// }
+
+// *::-webkit-scrollbar-track {
+//   background: #d9d9d9;
+// }
+
+// *::-webkit-scrollbar-thumb {
+//   background-color: #2D55A5;
+//   border-radius: 0.9rem;
+// }
+
+// @mixin smooth-trans($duration: 0.4s) {
+//   -webkit-transition: $duration ease-out 0s;
+//   -moz-transition: $duration ease-out 0s;
+//   -ms-transition: $duration ease-out 0s;
+//   -o-transition: $duration ease-out 0s;
+//   transition: $duration ease-out 0s;
+// }
+
+// @mixin gradient() {
+//   background: linear-gradient(271deg, #2B54A5 26.17%, #22AAE1 46.99%);
+//   background: -webkit-linear-gradient(271deg, #2B54A5 26.17%, #22AAE1 46.99%);
+//   background: -moz-linear-gradient(271deg, #2B54A5 26.17%, #22AAE1 46.99%);
+//   background: -o-linear-gradient(271deg, #2B54A5 26.17%, #22AAE1 46.99%);
+//   background: -ms-linear-gradient(271deg, #2B54A5 26.17%, #22AAE1 46.99%);
+// }
+
+// @mixin figure-size {
+//   position: relative;
+//   display: block;
+//   overflow: hidden;
+//   width: 100%;
+//   height: 0;
+// }
+
+// @mixin img-size {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+// }
+
+// @mixin textgradient {
+//   -webkit-text-fill-color: transparent;
+//   -webkit-background-clip: text;
+// }
+
+// @mixin single-h2 {
+//   font-family: var(--f-body);
+//   color: var(--blue);
+//   font-size: 3.25rem;
+//   font-weight: 800;
+//   line-height: 4.25rem;
+// }
+
+// @mixin span-h2 {
+//   font-family: var(--f-body);
+//   font-size: 3rem;
+//   font-weight: 600;
+//   line-height: 4.25rem;
+// }
+
+// @mixin desc {
+//   font-family: var(--f-body);
+//   font-size: 1rem;
+//   line-height: 1.5rem;
+// }
+
+// @mixin title-h3 {
+//   font-family: var(--f-body);
+//   font-size: 1.5rem;
+//   line-height: 2.25rem;
+// }
+
+// @mixin nex-bnt {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: fit-content;
+//   border-radius: 1.5rem;
+//   padding: 0.75rem 2rem;
+//   font-family: var(--f-body);
+//   font-size: 1rem;
+//   font-weight: 600;
+//   line-height: 1.5rem;
+//   color: var(--white);
+// }
+
+$m-18: 1800px;
+$m-15: 1500px;
+$m-14: 1480px;
+$m-13: 1380px;
+$m-12: 1280px;
+$m-11: 1199px;
+$m-9: 991px;
+$m-7: 767px;
+$m-6: 667px;
+$m-4: 480px;
+
+@mixin Responsive($screen) {
+  @if $screen == m-18 {
+    @media only screen and (min-width: $m-15) and (max-width: $m-18) {
+      @content;
+    }
+  } @else if $screen == m-14 {
+    @media only screen and (max-width: $m-14) {
+      @content;
+    }
+  } @else if $screen == m-13 {
+    @media only screen and (max-width: $m-13) {
+      @content;
+    }
+  } @else if $screen == m-12 {
+    @media only screen and (max-width: $m-12) {
+      @content;
+    }
+  } @else if $screen == m-11 {
+    @media only screen and (max-width: $m-11) {
+      @content;
+    }
+  } @else if $screen == m-9 {
+    @media only screen and (max-width: $m-9) {
+      @content;
+    }
+  } @else if $screen == m-7 {
+    @media only screen and (max-width: $m-7) {
+      @content;
+    }
+  } @else if $screen == m-6 {
+    @media only screen and (max-width: $m-6) {
+      @content;
+    }
+  } @else if $screen == m-4 {
+    @media only screen and (max-width: $m-4) {
+      @content;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1300px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.row-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+.row-10 {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.row-15 {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.p-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.p-10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.p-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
